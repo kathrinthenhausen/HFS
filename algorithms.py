@@ -44,7 +44,7 @@ def hnb(data, G, k, test, rnb = 1, select = 1, verbose = 0):
         
         
         #create select1 mit go_i
-        select1 = [feature for feature, status in instance_status.values() if status == 1]
+        select1 = [feature for feature, status in instance_status.items() if status == 1]
         select2 = []
         counter = 0
         for feature in sorted_relevance:

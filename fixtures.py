@@ -7,7 +7,7 @@ _instance_number = 20
 _feature_number = 9
 def getFixedDag():
     return nx.DiGraph([(0,1),(0,2),(0,3),(1,4),(1,5),(4,6),(4,7),(3,7),(5,8)])
-    return nx.DiGraph()
+    
 
 
 def getFixedAnnotated_dag():
