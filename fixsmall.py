@@ -34,4 +34,4 @@ def getFixed2Data():
         3:[1,0,0,1,0],
         4:[0,0,0,0,1],
         "y":[1,0,1,1,0]}
-    return pd.DataFrame(data)
+    return pd.DataFrame(data).to_numpy()

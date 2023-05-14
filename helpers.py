@@ -2,10 +2,10 @@ from fractions import Fraction
 
     
 
-def getRelevance(df, i):
+def getRelevance(X, y, i):
 
-    p1 = Fraction(df[(df[i]==1)& (df["y"]==1)].shape[0], df[(df[i]==1)].shape[0]) if df[(df[i]==1)].shape[0] != 0 else 0
-    p2 = Fraction(df[(df[i]==1)& (df["y"]==0)].shape[0], df[(df[i]==1)].shape[0]) if df[(df[i]==1)].shape[0] != 0 else 0
+    p1 = Fraction(X[(X[:,i]==1)& (y==1)].shape[0], X[(X[:,i]==1)].shape[0]) if X[(X[:,i]==1)].shape[0] != 0 else 0
+    p2 = Fraction(X[(X[:,i]==1)& (y==0)].shape[0], X[(X[:,i]==1)].shape[0]) if X[(X[:,i]==1)].shape[0] != 0 else 0
     p3 = 1 -p1
     p4 = 1 -p2
 

@@ -18,8 +18,8 @@ class FeatureSelect():
     def _get_relevance(self, feature):
         return getRelevance(self.train, feature)
     
-    def _get_ancestors(self, feature):
-        return nx.ancestors(self.digraph, feature)
+    def _get_ancestors(self, node):
+        return nx.ancestors(self.digraph, node)
     
     def _get_descendants(self, feature):
         return nx.descendants(self.digraph, feature)

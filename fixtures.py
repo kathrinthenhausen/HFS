@@ -38,5 +38,7 @@ def getFixedData(instance_number = _instance_number):
     df = pd.DataFrame(columns=[i for i in range(0,_feature_number)])
     for row in range(0,instance_number):
         df.loc[len(df)] = randomLinesWithAssertions()
+    return df.to_numpy(), np.random.randint(0, 2, df.shape[0])
     df["y"] = np.random.randint(0, 2, df.shape[0])
-    return df
+    x = df.to_numpy()
+    return x
